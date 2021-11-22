@@ -27,7 +27,7 @@ void getYear(int &year){
 }
 
 
-void getInput(float& initiate, int& tenor, int& year){}
+void getInput(float& initiate, int& tenor, float& total, int& year){
 	getDeposito(initiate, total);
 	getTenor(tenor);
 	getYear(year);
@@ -49,15 +49,14 @@ void getBunga(int& tenor, float& bunga, float& total) {
 			break;
 		default:
 			cout << "Salah!";
-			return 0;
+			exit(0);
 	}
-	return bunga;
 }
 
 void getTotalBunga(float& initiate, float& total, float& bunga, float& totalBunga, int& tenor, int& year){
-	int repetitive;
+	int i, repetitive;
 	repetitive = 12 / tenor * year;
-	if(int i = 1; i <= repetitive; i++){
+	if(i = 1; i <= repetitive; i++){
 		getBunga(tenor, bunga, total);
 		total += bunga;
 		totalBunga = total - initiate;
